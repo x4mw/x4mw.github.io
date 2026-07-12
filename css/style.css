@@ -1,0 +1,281 @@
+html {
+	text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: 'Roboto mono', monospace;	
+	background-color: #111;
+	color: #fc8a4e;
+	font-size: 18px;
+	line-height: 1.6;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+/*Stars Background*/
+body>canvas {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+	opacity:.6;
+	pointer-events:none
+}
+
+.ascii {
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	/* font-size: clamp(6px, 3vw, 20px); */
+	transition: all .2s ease-in-out;
+}
+
+p {
+	margin: 0;
+	text-align: justify;
+}
+
+h2 {
+	margin: 0;
+	font-weight: 400;
+}
+
+a {
+	color: #fc8a4e;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+ul {
+	list-style-type: square;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	padding-left: 20px;
+}
+
+/* <!-- H E A D E R -------------------------------------------------> */
+
+#header {
+	/* margin-bottom: 50px; */
+	/* padding: 15px; */
+	align-items: center;
+	align-content: center;
+	display: flex;
+	transition: all .2s ease-in-out;
+
+}
+
+#avatar {
+	align-items: center;
+	align-content: center;
+	display: flex;
+	padding: 20px;
+}
+
+#avatar img {
+	border: solid 1px transparent;
+	border-radius: 100px;
+	width: 200px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	object-fit: cover;
+	transition: all .3s ease-in-out;
+}
+
+#avatar img:hover {
+	border: solid 1px #222;
+	rotate: -7deg;
+	border-radius: 17px;
+	transition: all .3s ease-in-out;
+}
+
+#page-title {
+	font-family: 'Calluna', serif;
+	margin: 0 auto;
+	text-align: center;
+	user-select: none;
+	position: relative;
+}
+
+#page-title h1 {
+	font-size: 58px;
+	font-weight: 400;
+	/* margin-bottom: 7px; */
+	top: 195.1px;
+	right: -90px;
+	position: absolute;
+}
+
+#page-description {
+	color: #fc8a4e;
+	font-size: 18px;
+	margin: auto;
+	text-align: center;
+	width: 450px;
+}
+
+
+/* <!-- N A V -------------------------------------------------> */
+
+nav {
+	margin-bottom: 75px;
+	user-select: none;
+}
+
+#nav-bar {
+	display: block;
+	text-align: center;
+}
+
+#nav-bar ul {
+	padding: 0;
+}
+
+#nav-bar ul li {
+	display: inline-block;
+	margin: 0 auto;		
+}
+
+#nav-bar a {
+	color: #fc8a4e;
+	text-transform: lowercase;
+	transition: all .2s ease-in-out;
+	padding: 0 5px 0 5px;
+}
+
+#nav-bar a:hover {
+	background-color: rgba(0,0,0,0.1);
+	transition: all .2s ease-in-out;
+	border-radius: 10px;
+}
+
+
+/* <!-- P O S T -------------------------------------------------> */
+
+#post {
+	background-color: #202428;
+	display: block;
+	margin: 0 auto;
+	box-shadow: 6px 6px 0px rgba(0,0,0,0.4);
+	margin-bottom: 50px;
+	width: 600px;
+	/* border: solid 1px #2d3339; */
+	transition: all .2s ease-in-out;
+}
+
+#post-title {
+	padding: 20px;
+	user-select: none;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+/* 
+#post-image {
+} */
+
+#post-image img {
+	width: 100%;
+}
+
+#post-description {
+	padding: 20px;
+}
+
+.preview {
+	position: relative;
+	transform-origin: top center;
+	transition: all .2s ease-in-out;
+	user-select: none;
+	display: block;
+}
+
+
+/* <!-- F O O T E R -------------------------------------------------> */
+
+.footer {
+	margin-top: 70px;
+	margin-bottom: 70px;
+	
+}
+
+.footer p {
+	text-align: center;
+	/* color: #222; */
+	color: #fc8a4e;
+}
+
+#container {
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 100px;
+}
+
+
+/* <!-- A E S T H E T I C S -->-------------------------------------------------> */
+::selection,
+::-moz-selection {  
+	background: lightcoral;
+	color: #222;
+}
+
+mark {
+	background-color: #f08080;
+}
+
+
+/* <!-- M E D I A   Q U E R I E S -------------------------------------------------> */
+
+@media only screen and (max-width: 700px) {
+	
+	#post {	
+		width: 100%;
+	}
+
+	#container {
+		margin: 0 auto;
+		width: 90%;
+		margin-top: 100px;
+	}
+	
+	#header {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	.ascii {
+		/* margin: auto;
+		width: 100%;
+		text-align: center; */
+		font-size: clamp(6px, 2.7vw, 20px);
+	}
+}
+
+@media only screen and (max-width: 800px) {
+
+		
+
+	#page-title h1 {
+		display: none;
+		transition: all .2s ease-in-out;
+	}
+	/* <!-- H E A D E R -------------------------------------------------> */
+
+	#page-description {
+		width: 100%;
+	}
+
+	/* <!-- P O S T -------------------------------------------------> */
+
+}
