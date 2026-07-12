@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">  
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
 	<title>Portfolio</title>
+	<audio id="music" autoplay loop src="https://github.com/x4mv/x4mv.github.io/raw/refs/heads/main/media/YB.mp3" type="audio/mpeg"></audio>
 </head>
 <body>
 
@@ -152,6 +153,21 @@ d88P     888 888   T88b  "Y8888P" d88P     888 888    Y888
 
 		<script src="three.js"></script>
 		<script src="starfield.js"></script>
+
+		<script>
+			document.addEventListener('click', function music() {
+				const music = document.getElementById('music');
+				music.play()
+					.then(() => {
+						document.removeEventListener('click', music);
+					})
+					.catch(error => {
+						console.log("El navegador bloqueó el audio o no cargó el archivo:", error);
+					});
+			});
+		</script>
+
+
 
 </body>
 </html>
