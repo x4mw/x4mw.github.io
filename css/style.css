@@ -1,7 +1,5 @@
 html {
-	text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
 }
 
 body {
@@ -11,6 +9,14 @@ body {
 	font-size: 18px;
 	line-height: 1.6;
 	image-rendering: -webkit-optimize-contrast;
+	overflow-x: hidden;
+}
+
+audio {
+	opacity: .3;
+	position: absolute;
+	top: 0;
+	left: 50%;
 }
 
 /*Stars Background*/
@@ -41,14 +47,23 @@ p {
 h2 {
 	margin: 0;
 	font-weight: 400;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: center;
 }
 
 a {
 	color: #fc8a4e;
+	font-family: 'Consolas', monospace;
 }
 
 a:hover {
-	font-weight: bold;
+	font-weight: 400;
+}
+
+span {
+	font-family: "Consolas", monospace;
 }
 
 ul {
@@ -56,6 +71,10 @@ ul {
 	margin-bottom: 20px;
 	margin-top: 5px;
 	padding-left: 20px;
+}
+
+li {
+	font-family: "Consolas", monospace;
 }
 
 /* <!-- H E A D E R -------------------------------------------------> */
@@ -67,7 +86,7 @@ ul {
 	align-content: center;
 	display: flex;
 	transition: all .2s ease-in-out;
-
+	margin-bottom: 110px;
 }
 
 #avatar {
@@ -124,7 +143,7 @@ ul {
 /* <!-- N A V -------------------------------------------------> */
 
 nav {
-	margin-bottom: 75px;
+	margin-bottom: 60px;
 	user-select: none;
 }
 
@@ -235,6 +254,15 @@ mark {
 
 @media only screen and (max-width: 700px) {
 	
+	h2 {
+		font-size: .8em;
+	}
+	
+	p, a, li {
+		font-size: .9em
+	}
+	
+
 	#post {	
 		width: 100%;
 	}
